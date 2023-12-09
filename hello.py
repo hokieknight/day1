@@ -1,5 +1,6 @@
 # comment
 name = input("What is your name? ")
 print("Hello " + name)
-print(len(name))
+length = len(name)
+print(length)
 print("hello world\nbye world")
