@@ -47,6 +47,21 @@ import random
 
 rint = random.randint(1,100)
 print(f"random # {rint}")
+print(f"random # {random.random()}")
 
 import my_mod
 print(my_mod.pi)
+
+states = ["Delaware", "Pennsylvania", "New Jersey"]
+states.append("Georgia")
+print(states[-2])
+
+for state in states:
+    print(state)
+
+for num in range(1, 10, 3):
+    print(num)
+
+print(random.choice(states))
+random.shuffle(states)
+print(states)
