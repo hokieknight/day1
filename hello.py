@@ -48,8 +48,11 @@ def is_leap_year(year):
         print(f"{year} is a leap year")
     else:
         print(f"{year} is not a leap year")
+    return is_leap
 
 is_leap_year(2024)
+is_leap_year(2000)
+print(is_leap_year(2021))
 
 rint = random.randint(1,100)
 print(f"random # {rint}")
@@ -72,3 +75,17 @@ random.shuffle(states)
 print(states)
 
 my_mod.myfunc()
+
+
+if "Delaware" in states:
+    print("Yes")
+
+my_dictionary = {
+    "Bug": "An Error",
+    "Function": "Sub process",
+}
+my_dictionary["Loop"] = Rrepetitive action"
+
+for key, value in my_dictionary.items():
+    print(f"{key}: {value}")
+    #print(my_dictionary[key])
