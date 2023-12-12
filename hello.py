@@ -1,56 +1,61 @@
-# comment
-name = "Blah" #input("What is your name? ")
-print("Hello " + name)
-length = len(name)
-print(length)
+"""Module providing hello world testing."""
+import random
+import my_mod
+
+NAME = "Blah" #input("What is your name? ")
+print("Hello " + NAME)
+NAME = "Blah2"
+LENGTH = len(NAME)
+print(LENGTH)
 print("hello world\nbye world")
 print("hello"[4])
 
-somenum = 123_456_789
-print(somenum)
-print(type(somenum))
-print(type(str(somenum)))
+SOME_NUM = 123_456_789
+print(SOME_NUM)
+print(type(SOME_NUM))
+print(type(str(SOME_NUM)))
 
-print(f"some number = {somenum}")
+print(f"some number = {SOME_NUM}")
 print(8//3)  #trunc to int
 print(2**3) #exponent
 
-num = 101   
-if num % 2 == 0:
-    print (f"{num} is even")
+NUM = 101
+if NUM % 2 == 0:
+    print (f"{NUM} is even")
 else:
-    print(f"{num} is odd")
+    print(f"{NUM} is odd")
 
-age = 17
-if age < 12:
+AGE = 17
+if AGE < 12:
     print("Pay $5")
-elif age < 18:
+elif AGE < 18:
     print("Pay $7")
 else:
     print("Pay $12")
 
 
-year = 2024
-isLeapYear = False
-if year % 4 == 0:
-    isLeapYear = True
-if year % 100 == 0:
-    isLeapYear = False
-if year % 400 == 0:
-    isLeapYear = True
-if isLeapYear:
-    print(f"{year} is a leap year")
-else:
-    print(f"{year} is not a leap year")
+def is_leap_year(year):
+    """Function checking leap year."""
+    #YEAR = 2024
+    is_leap = False
+    if year % 4 == 0:
+        is_leap = True
+    if year % 100 == 0:
+        is_leap = False
+    if year % 400 == 0:
+        is_leap = True
+    if is_leap:
+        print(f"{year} is a leap year")
+    else:
+        print(f"{year} is not a leap year")
 
-import random
+is_leap_year(2024)
 
 rint = random.randint(1,100)
 print(f"random # {rint}")
 print(f"random # {random.random()}")
 
-import my_mod
-print(my_mod.pi)
+print(my_mod.PI)
 
 states = ["Delaware", "Pennsylvania", "New Jersey"]
 states.append("Georgia")
@@ -59,9 +64,11 @@ print(states[-2])
 for state in states:
     print(state)
 
-for num in range(1, 10, 3):
-    print(num)
+for NUM in range(1, 10, 3):
+    print(NUM)
 
 print(random.choice(states))
 random.shuffle(states)
 print(states)
+
+my_mod.myfunc()
