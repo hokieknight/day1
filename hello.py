@@ -1,6 +1,7 @@
 """Module providing hello world testing."""
 import random
-import my_mod
+from my_mod import PI
+from my_mod import myfunc
 
 NAME = "Blah" #input("What is your name? ")
 print("Hello " + NAME)
@@ -58,7 +59,7 @@ rint = random.randint(1,100)
 print(f"random # {rint}")
 print(f"random # {random.random()}")
 
-print(my_mod.PI)
+print(PI)
 
 states = ["Delaware", "Pennsylvania", "New Jersey"]
 states.append("Georgia")
@@ -74,7 +75,7 @@ print(random.choice(states))
 random.shuffle(states)
 print(states)
 
-my_mod.myfunc()
+myfunc()
 
 
 if "Delaware" in states:
@@ -84,7 +85,7 @@ my_dictionary = {
     "Bug": "An Error",
     "Function": "Sub process",
 }
-my_dictionary["Loop"] = Rrepetitive action"
+my_dictionary["Loop"] = "A tepetitive action"
 
 for key, value in my_dictionary.items():
     print(f"{key}: {value}")
