@@ -85,8 +85,31 @@ my_dictionary = {
     "Bug": "An Error",
     "Function": "Sub process",
 }
-my_dictionary["Loop"] = "A tepetitive action"
+my_dictionary["Loop"] = "A repetitive action"
 
 for key, value in my_dictionary.items():
     print(f"{key}: {value}")
     #print(my_dictionary[key])
+
+#day 10
+def add(a, b):
+    """add"""
+    return a + b
+def sub(a, b):
+    """subtract"""
+    return a - b
+def mult(a, b):
+    """multiply"""
+    return a * b
+def div(a, b):
+    """divide"""
+    return a / b
+
+ops = {
+    "+": add,
+    "-": sub,
+    "*": mult,
+    "/": div,
+}
+
+print(ops["*"](4,3))
