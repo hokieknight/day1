@@ -25,4 +25,7 @@ class User:
 
     def to_string(self):
         """to string"""
-        return f"{self.id}, name = {self.username}, following = {self.following}, followers = {self.followers}"
+        return (f"{self.id}"
+        f", name = {self.username}"
+        f", following = {self.following}"
+        f", followers = {self.followers}")
