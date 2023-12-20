@@ -1,7 +1,7 @@
 """Module providing hello world testing."""
-import random
-from my_mod import PI
-from my_mod import myfunc
+#import random
+import numpy as np
+from my_mod import PI, myfunc, User
 
 NAME = "Blah" #input("What is your name? ")
 print("Hello " + NAME)
@@ -55,9 +55,9 @@ is_leap_year(2024)
 is_leap_year(2000)
 print(is_leap_year(2021))
 
-rint = random.randint(1,100)
+rint = np.random.randint(1,100)
 print(f"random # {rint}")
-print(f"random # {random.random()}")
+print(f"random # {np.random.random()}")
 
 print(PI)
 
@@ -71,8 +71,8 @@ for state in states:
 for NUM in range(1, 10, 3):
     print(NUM)
 
-print(random.choice(states))
-random.shuffle(states)
+print(np.random.choice(states))
+np.random.shuffle(states)
 print(states)
 
 myfunc()
@@ -113,3 +113,12 @@ ops = {
 }
 
 print(ops["*"](4,3))
+
+user_1 = User("001", "bart")
+user_1.dynamic_name = "blah"
+user_2 = User("002", "lisa")
+user_1.follow(user_2)
+
+print(user_1.dynamic_name)
+print(user_1.to_string())
+print(user_2.to_string())
